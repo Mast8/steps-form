@@ -54,17 +54,12 @@ function App() {
       
     
       <form onSubmit={onSubmit}>
-        <div className="step" style={{ position: "absolute", top: ".5rem", right: ".5rem" }}>
+        <div className="step">
           {currentStepIndex + 1} / {steps.length}
         </div>
         {step}
-        <div
-          style={{
-            marginTop: "1rem",
-            display: "flex",
-            gap: ".5rem",
-            justifyContent: "flex-end",
-          }}
+        <div className="div-btn"
+          
         >
           {!isFirstStep && (
             <button type="button" onClick={back}>

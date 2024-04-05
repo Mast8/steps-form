@@ -1,3 +1,9 @@
+ #root {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+ }
+
 .form-div {
   position: relative;
   background: white;
@@ -7,8 +13,33 @@
   border-radius: .5rem;
   font-family: Arial;
   max-Width:  max-content;
-  display: flex;
-  justify-content: center;
-  text-align: center;
+}
+
+.step {
+  position: absolute;
+   top: .5rem;
+    right: .5rem;
 }
  
+.div-btn {
+    margin-top: 1rem;
+    display: flex;
+    gap: .5rem;
+    justify-Content: flex-end;
+}
+
+button {
+  color: grey;
+  font-weight: 100;
+  border-radius: .5em;
+  padding: 8px;
+  cursor: pointer;
+  background-color: rgb(31, 54, 5);
+}
+
+button:hover {
+  background-color: grey;
+  color: aqua;
+  border-radius: .5em;
+
+}
