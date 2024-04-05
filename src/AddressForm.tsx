@@ -1,7 +1,6 @@
 import { FormWrapper } from "./FormWrapper"
 
 type AddressData = {
-  
   street: string
   city: string
   state: string
@@ -13,7 +12,6 @@ type AddressFormProps = AddressData & {
 }
 
 export function AddressForm({
- 
   street,
   city,
   state,
