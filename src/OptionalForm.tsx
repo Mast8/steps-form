@@ -29,15 +29,15 @@ export function OptionalForm({
 
       <label>Are you a student?</label>
       <select value={student} onChange={e => updateFields({ student: e.target.value })}> 
-        <option value="" selected disabled hidden>Choose here</option>
-        <option value="Yes" > Yes</option>
-        <option value="No" > No</option>
+        <option value="" disabled hidden>Choose here</option>
+        <option value="Yes" >Yes</option>
+        <option value="No" >No</option>
       </select>
      
-
+        <div></div>
       {student === "Yes" &&
        <div className="years"> 
-          <label>how many years?</label> 
+          <label>How many years?</label> 
                 <input
                     type="number"
                     value={years}
