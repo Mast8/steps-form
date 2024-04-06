@@ -4,6 +4,7 @@ import { AddressForm } from "./AddressForm"
 import { useMultistepForm } from "./useMultistepForm";
 import { UserForm } from "./UserForm";
 import "./index.css";
+import { OptionalForm } from "./OptionalForm";
 
 type FormData = {
   firstName: string
@@ -15,6 +16,7 @@ type FormData = {
   zip: string
   email: string
   password: string
+  student : string
 }
 
 const INITIAL_DATA: FormData = {
@@ -27,6 +29,7 @@ const INITIAL_DATA: FormData = {
   zip: "",
   email: "",
   password: "",
+  student:""
 }
 
 function App() {
@@ -39,6 +42,7 @@ function App() {
   const { steps, currentStepIndex, step, isFirstStep, isLastStep, back, next } =
     useMultistepForm([
       <UserForm {...data} updateFields={updateFields} />,
+      <OptionalForm {...data} updateFields={updateFields} />,
       <AddressForm {...data} updateFields={updateFields} />,
       <AccountForm {...data} updateFields={updateFields} />,
     ])

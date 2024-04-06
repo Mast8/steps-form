@@ -4,6 +4,7 @@ type UserData = {
   firstName: string
   lastName: string
   age: string
+  student: string
 }
 
 type UserFormProps = UserData & {
@@ -14,6 +15,7 @@ export function UserForm({
   firstName,
   lastName,
   age,
+  student,
   updateFields,
 }: UserFormProps) {
   return (
