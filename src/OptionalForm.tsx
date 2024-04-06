@@ -1,7 +1,10 @@
 import { FormWrapper } from "./FormWrapper"
+import "./OptionalForm.css"
 
 type OptionalData = {
-  student: string
+    languaje:string
+    student: string
+    years:string
 }
 
 type OptionalFormProps = OptionalData & {
@@ -9,27 +12,43 @@ type OptionalFormProps = OptionalData & {
 }
 
 export function OptionalForm({
-  
+  languaje,
   student,
+  years,
   updateFields,
 }: OptionalFormProps) {
   return (
     <FormWrapper title="Ocupation Details">
       
-      {/* <label>Age</label>
+      <label>Prefered  programming language</label>
       <input
-        required
-        min={1}
-        type="number"
-        value={age}
-        onChange={e => updateFields({ age: e.target.value })}
-      /> */}
+        type="string"
+        value={languaje}
+        onChange={e => updateFields({ languaje: e.target.value })}
+      /> 
+
       <label>Are you a student?</label>
       <select value={student} onChange={e => updateFields({ student: e.target.value })}> 
         <option value="" selected disabled hidden>Choose here</option>
         <option value="Yes" > Yes</option>
         <option value="No" > No</option>
       </select>
+     
+
+      {student === "Yes" &&
+       <div className="years"> 
+          <label>how many years?</label> 
+                <input
+                    type="number"
+                    value={years}
+                    onChange={e => updateFields({ years: e.target.value })}
+                /> 
+       </div>
+     }
+        
+        
+      
+      
     </FormWrapper>
   )
 }

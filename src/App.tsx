@@ -16,7 +16,9 @@ type FormData = {
   zip: string
   email: string
   password: string
+  languaje:string
   student : string
+  years:string
 }
 
 const INITIAL_DATA: FormData = {
@@ -29,7 +31,9 @@ const INITIAL_DATA: FormData = {
   zip: "",
   email: "",
   password: "",
-  student:""
+  languaje:"",
+  student:"",
+  years:""
 }
 
 function App() {
