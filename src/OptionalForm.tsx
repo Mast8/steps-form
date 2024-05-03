@@ -20,15 +20,16 @@ export function OptionalForm({
   return (
     <FormWrapper title="Ocupation Details">
       
-      <label>Prefered  programming language</label>
+      <label htmlFor="language">Prefered  programming language</label>
       <input
+        id="language"
         type="string"
         value={languaje}
         onChange={e => updateFields({ languaje: e.target.value })}
       /> 
 
-      <label>Are you a student?</label>
-      <select value={student} onChange={e => updateFields({ student: e.target.value })}> 
+      <label htmlFor="student">Are you a student?</label>
+      <select id="student" value={student} onChange={e => updateFields({ student: e.target.value })}> 
         <option value="" disabled hidden>Choose here</option>
         <option value="Yes" >Yes</option>
         <option value="No" >No</option>
@@ -37,8 +38,9 @@ export function OptionalForm({
         <div></div>
       {student === "Yes" &&
        <div className="years"> 
-          <label>How many years?</label> 
+          <label htmlFor="years">How many years?</label> 
                 <input
+                    id="years"
                     type="number"
                     value={years}
                     onChange={e => updateFields({ years: e.target.value })}

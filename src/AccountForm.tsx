@@ -16,16 +16,19 @@ export function AccountForm({
 }: AccountFormProps) {
   return (
     <FormWrapper title="Account Creation">
-      <label>Email</label>
+      <label htmlFor="email">Email</label>
       <input
+        id="email"
         autoFocus
+        autoComplete="email"
         required
         type="email"
         value={email}
         onChange={e => updateFields({ email: e.target.value })}
       />
-      <label>Password</label>
+      <label htmlFor="password">Password</label>
       <input
+        id="password"
         required
         type="password"
         value={password}
